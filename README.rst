@@ -65,3 +65,27 @@ TensorFlow with *GPU support* can be as follows:
 Please refer to `Official TensorFLow installation guideline`_ for further details considering your specific system architecture.
 
 .. _Official TensorFLow installation guideline: https://openreview.net/pdf?id=S1dGIXVUz
+
+--------------------
+Code Implementation
+--------------------
+
+~~~~~~~~
+dataset
+~~~~~~~~
+For this reposity, the experiments are performed on `MNIST dataset`_ which is available online.
+*MNIST* can directly be downloaded using the following script supported by *TensorFLow*:
+
+.. code:: python
+
+    from tensorflow.examples.tutorials.mnist import input_data
+    mnist = input_data.read_data_sets(FLAGS.data_dir, fake_data=FLAGS.fake_data)
+
+For which the **FLAGS** are predefined by *argument parser*.
+
+
+
+
+
+
+.. _MNIST dataset: http://yann.lecun.com/exdb/mnist/
