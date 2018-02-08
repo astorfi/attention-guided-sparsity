@@ -44,3 +44,24 @@ incorporated for any layer type
 .. |im| image:: _img/varianceloss.gif
 
 |im|
+
+
+-------------
+Requirements
+-------------
+
+~~~~~~~~~~~
+TensorFLow
+~~~~~~~~~~~
+
+This code is written in Python and requires **TensorFlow** as the framework. For installation on *Ubuntu*, installing
+TensorFlow with *GPU support* can be as follows:
+
+.. code:: shell
+
+    sudo apt-get install python3-pip python3-dev # for Python 3.n
+    pip3 install tensorflow-gpu
+
+Please refer to `Official TensorFLow installation guideline`_ for further details considering your specific system architecture.
+
+.. _Official TensorFLow installation guideline: https://openreview.net/pdf?id=S1dGIXVUz
