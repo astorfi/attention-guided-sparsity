@@ -185,6 +185,6 @@ Results
 The below figure depicts a comparison at different level of sparsity. As it can be observed from the figure, our
 method demonstrates its superiority in higher levels of sparsity.
 
-.. |im| image:: _img/comparison.png
+.. |imcomp| image:: _img/comparison.png
 
-|im|
+|imcomp|
