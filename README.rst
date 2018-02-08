@@ -11,6 +11,9 @@ Attention-Based Guided Structured Sparsity of Deep Convolutional Neural Networks
     :target: https://coveralls.io/github/astorfi/attention-guided-sparsity?branch=master
 .. image:: http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat
     :target: https://github.com/astorfi/attention-guided-sparsity/blob/master/LICENSE
+.. image:: http://www.repostatus.org/badges/latest/active.svg
+   :alt: Project Status: Active – The project has reached a stable, usable state and is being actively developed.
+   :target: http://www.repostatus.org/#active
 
 This repository contains the code developed by TensorFlow_ for the following paper:
 
