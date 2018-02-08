@@ -95,7 +95,7 @@ have been defined in the ``VisualizeLip.py`` file:
   parser.add_argument('--fake_data', nargs='?', const=True, type=bool,
                       default=False,
                       help='If true, uses fake data for unit testing.')
-  parser.add_argument('--max_steps', type=int, default=300000,
+  parser.add_argument('--max_steps', type=int, default=100,
                       help='Number of steps to run trainer.')
   parser.add_argument('--learning_rate', type=float, default=0.0001,
                       help='Initial learning rate')
@@ -168,13 +168,14 @@ At first, please clone the repository. Then, execute the ``main.py``:
 
 .. code:: shell
 
-    python main.py
+    python main.py --max_steps=100000
 
 Using the above script, the code does the following:
 
   * Automatically download the dataset
   * Starts training
   * Does the evaluation while training is running.
+  * Continue training up to 100000 steps.
 
 **NOTE:** *If you are using a virtual environment which contain TensorFLow, make sure to activate it before running the model.*
 
