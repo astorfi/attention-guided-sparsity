@@ -21,13 +21,12 @@ This repository contains the code developed by TensorFlow_ for our paper:
 
 
 | `Attention-Based Guided Structured Sparsity of Deep Neural Networks`_,
-| by: `Amirsina Torfi`_ and Rouzbeh Asghari Shirvani
+| by: `Amirsina Torfi`_ and `Rouzbeh Asghari Shirvani`_
 
 .. _Attention-Based Guided Structured Sparsity of Deep Neural Networks: https://openreview.net/pdf?id=S1dGIXVUz
 .. _TensorFlow: https://www.tensorflow.org/
 .. _Amirsina Torfi: https://astorfi.github.io/
-
-
+.. _Rouzbeh Asghari Shirvani: https://www.linkedin.com/in/rozbeh/
 
 #################
 Table of Contents
