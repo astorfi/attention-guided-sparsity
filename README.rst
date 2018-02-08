@@ -13,6 +13,15 @@ This repository contains the code developed by TensorFlow_ for the following pap
 .. _Amirsina Torfi: https://astorfi.github.io/
 
 
+
+#################
+Table of Contents
+#################
+.. contents::
+  :local:
+  :depth: 3
+
+
 -----------------
 Goal and Outcome
 -----------------
