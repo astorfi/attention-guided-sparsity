@@ -193,8 +193,8 @@ Results
 --------
 
 The below figure depicts a comparison at different level of sparsity. As it can be observed from the figure, our
-method demonstrates its superiority in higher levels of sparsity. We named our proposed method as ** Guided Structured
-Sparsity (GSS) **.
+method demonstrates its superiority in higher levels of sparsity. We named our proposed method as **Guided** **Structured**
+**Sparsity** (**GSS**).
 
 .. |imcomp| image:: _img/comparison.png
 
