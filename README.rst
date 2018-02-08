@@ -9,7 +9,8 @@ Attention-Based Guided Structured Sparsity of Deep Convolutional Neural Networks
     :target: https://travis-ci.org/astorfi/attention-guided-sparsity
 .. image:: https://coveralls.io/repos/github/astorfi/attention-guided-sparsity/badge.svg?branch=master
     :target: https://coveralls.io/github/astorfi/attention-guided-sparsity?branch=master
-[![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE)
+.. image:: http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat
+    :target: https://github.com/astorfi/attention-guided-sparsity/blob/master/LICENSE
 
 This repository contains the code developed by TensorFlow_ for the following paper:
 
