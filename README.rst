@@ -29,3 +29,8 @@ and supervised network pruning by keeping important information bottlenecks of
 the network to be active. On CIFAR-10, *the proposed method outperforms the
 best baseline method by 6% and reduced the accuracy drop by 2.6× at the same
 level of sparsity.*
+
+
+.. |im| image:: _img/varianceloss.gif
+
+|im|
