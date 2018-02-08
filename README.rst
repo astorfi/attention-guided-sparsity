@@ -42,7 +42,7 @@ Goal and Outcome
 -----------------
 
 Network pruning is aimed at imposing sparsity in a neural network architecture
-by increasing the portion of zero-valued weights for reducing its size energyefficiency
+by increasing the portion of zero-valued weights for reducing its size energy efficiency
 consideration and increasing evaluation speed. In most of the conducted
 research efforts, the sparsity is enforced for network pruning without any attention
 to the internal network characteristics such as unbalanced outputs of the neurons or
@@ -97,7 +97,7 @@ Code Implementation
 ~~~~~~~~
 dataset
 ~~~~~~~~
-For this reposity, the experiments are performed on `MNIST dataset`_ which is available online.
+For this repository, the experiments are performed on `MNIST dataset`_ which is available online.
 *MNIST* can directly be downloaded using the following script supported by *TensorFLow*:
 
 .. code:: python
@@ -207,13 +207,13 @@ Using the above script, the code does the following:
   * Does the evaluation while training is running.
   * Continue training up to 100000 steps.
 
-**NOTE:** *If you are using a virtual environment which contain TensorFLow, make sure to activate it before running the model.*
+**NOTE:** *If you are using a virtual environment which contains TensorFLow, make sure to activate it before running the model.*
 
 --------
 Results
 --------
 
-The below figure depicts a comparison at different level of sparsity. As it can be observed from the figure, our
+The below figure depicts a comparison at different levels of sparsity. As it can be observed from the figure, our
 method demonstrates its superiority in higher levels of sparsity. We named our proposed method as **Guided** **Structured**
 **Sparsity** (**GSS**).
 
