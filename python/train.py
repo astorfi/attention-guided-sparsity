@@ -1,20 +1,14 @@
 import functools
-from apiclient import errors
-from apiclient.http import MediaFileUpload
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
 import argparse
 import os
 import sys
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
-from losses import *
-from sparsity_ops import *
+import losses
+import sparsity_ops
 FLAGS = None
 
-
-def train():
+def train(FLAGS):
 
     # Import MNIST data
     mnist = input_data.read_data_sets(FLAGS.data_dir,
@@ -94,8 +88,8 @@ def train():
 
                 # At evaluation time, some weights are forced to be zero with the sparsity criterion.
                 weights = tf.cond(training_status,
-                   true_fn = lambda: _sparse_fn(weights,threshold=0.0),
-                   false_fn = lambda: _sparse_fn(weights,threshold=FLAGS.sparsity_threshold))
+                   true_fn = lambda: sparsity_ops._sparse_fn(weights,threshold=0.0),
+                   false_fn = lambda: sparsity_ops._sparse_fn(weights,threshold=FLAGS.sparsity_threshold))
 
                 preactivate = tf.matmul(input_tensor, weights) + biases
                 # tf.summary.histogram('pre_activations', preactivate)
@@ -134,8 +128,8 @@ def train():
 
                 # At evaluation time, some weights are forced to be zero with the sparsity criterion.
                 weights = tf.cond(training_status,
-                   true_fn = lambda: _sparse_fn(weights,threshold=0.0),
-                   false_fn = lambda: _sparse_fn(weights,threshold=FLAGS.sparsity_threshold))
+                   true_fn = lambda: sparsity_ops._sparse_fn(weights,threshold=0.0),
+                   false_fn = lambda: sparsity_ops._sparse_fn(weights,threshold=FLAGS.sparsity_threshold))
 
                 preactivate = conv2d(input_tensor, weights,padding) + biases
                 # tf.summary.histogram('pre_activations', preactivate)
@@ -196,10 +190,10 @@ def train():
 
     # Compute the regularization term
     with tf.name_scope('group_lasso'):
-        lasso_loss = 0.001 * _group_lasso(trainable_variables)
+        lasso_loss = 0.001 * losses._group_lasso(trainable_variables)
 
     with tf.name_scope('group_variance'):
-        variance_loss = 0.01 * _group_variance(trainable_variables)
+        variance_loss = 0.01 * losses._group_variance(trainable_variables)
 
     tf.losses.add_loss(
         lasso_loss,
@@ -213,7 +207,7 @@ def train():
 
     # Compute the regularization term
     with tf.name_scope('Sparsity'):
-        sparsity, num_params = _sparsity_calculatior(trainable_variables)
+        sparsity, num_params = sparsity_ops._sparsity_calculatior(trainable_variables,FLAGS.sparsity_threshold)
 
     tf.summary.scalar('sparsity', sparsity)
 

@@ -1,9 +1,7 @@
-import functools
-from apiclient import errors
-from apiclient.http import MediaFileUpload
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
+import functools
 import argparse
 import os
 import sys
@@ -11,6 +9,7 @@ import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 from losses import *
 from sparsity_ops import *
+from train import *
 FLAGS = None
 # from IPython.core.debugger import set_trace
 
@@ -19,7 +18,7 @@ def main(_):
     if tf.gfile.Exists(FLAGS.log_dir):
         tf.gfile.DeleteRecursively(FLAGS.log_dir)
     tf.gfile.MakeDirs(FLAGS.log_dir)
-    train()
+    train(FLAGS)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -46,5 +45,6 @@ if __name__ == '__main__':
         default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
                              'tensorflow/mnist/logs/mnist_sparsity'),
         help='Summaries log directory')
+
     FLAGS, unparsed = parser.parse_known_args()
     tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)

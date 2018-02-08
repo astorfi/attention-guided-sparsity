@@ -1,17 +1,5 @@
-import functools
-from apiclient import errors
-from apiclient.http import MediaFileUpload
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-import argparse
-import os
-import sys
 import tensorflow as tf
-from tensorflow.examples.tutorials.mnist import input_data
-from losses import *
-from sparsity_ops import *
-FLAGS = None
+import functools
 
 def _sparse_fn(weights,threshold=0.001):
     # Force weights less than a threshold to zero.
@@ -25,7 +13,7 @@ def _sparse_fn(weights,threshold=0.001):
     return W_sparse
 
 
-def _sparsity_calculatior(v):
+def _sparsity_calculatior(v,threshold=0.0):
 
     # Calculation of the sparsity of the network
     sparsity_layers = []
@@ -35,7 +23,7 @@ def _sparsity_calculatior(v):
               if 'conv' or 'fc' in W.name:
 
                   # Set threshold and clip
-                  W_sparse = tf.clip_by_value(tf.subtract(tf.abs(W), FLAGS.sparsity_threshold),\
+                  W_sparse = tf.clip_by_value(tf.subtract(tf.abs(W), threshold),\
                                               clip_value_min=0, clip_value_max=10000)
 
                   # Sparsity calculation
