@@ -177,7 +177,13 @@ investigation of our proposed method with no data augmentation. The baseline arc
 Training / Evaluation
 ----------------------
 
-At first, please clone the repository. Then, execute the ``main.py``:
+At first, clone the repository. Then, cd to the dedicated directory:
+
+.. code:: shell
+
+    cd python
+
+Then, execute the ``main.py``:
 
 .. code:: shell
 
