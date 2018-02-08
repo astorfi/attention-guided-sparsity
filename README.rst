@@ -41,6 +41,6 @@ portion of the output neurons to stay alive in each layer of the network, and (3
 incorporated for any layer type
 
 
-.. |im| image:: _img/varianceloss.gif
+.. |im| image:: _img/varianceloss.png
 
 |im|
