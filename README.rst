@@ -30,6 +30,16 @@ the network to be active. On CIFAR-10, *the proposed method outperforms the
 best baseline method by 6% and reduced the accuracy drop by 2.6× at the same
 level of sparsity.*
 
+-------------------
+Scope of the works
+-------------------
+
+In this work, we proposed a controller mechanism for network pruning with the goal of (1) model
+compression for having few active parameters by enforcing group sparsity, (2) preventing the accuracy
+drop by controlling the sparsity of the network using an additional loss function by forcing a
+portion of the output neurons to stay alive in each layer of the network, and (3) capability of being
+incorporated for any layer type
+
 
 .. |im| image:: _img/varianceloss.gif
 
