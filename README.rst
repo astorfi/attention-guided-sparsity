@@ -113,9 +113,78 @@ have been defined in the ``VisualizeLip.py`` file:
 All of the defined arguments have their default values and no further action is
 required.
 
-
-
-
-
-
 .. _MNIST dataset: http://yann.lecun.com/exdb/mnist/
+
+
+~~~~~~~~~~~~
+Architecture
+~~~~~~~~~~~~
+
+In the experiment on MNIST dataset, an architecture similar to **LeNet** has been utilized as a baseline for
+investigation of our proposed method with no data augmentation. The baseline architecture has been defined as below:
+
+.. code:: python
+
+    def net(x,training_status):
+
+        with tf.name_scope('reshape'):
+            x_image = tf.reshape(x, [-1, 28, 28, 1])
+
+        h_conv1 = nn_conv_layer(x_image, [5, 5, 1, 64], [64], 'conv1', \
+                                training_status=training_status, act=tf.nn.relu)
+
+        with tf.name_scope('pool1'):
+            h_pool1 = max_pool_2x2(h_conv1)
+
+        h_conv2 = nn_conv_layer(h_pool1, [5, 5, 64, 128], [128], 'conv2',\
+                                training_status=training_status, act=tf.nn.relu)
+
+        # Second pooling layer.
+        with tf.name_scope('pool2'):
+            h_pool2 = max_pool_2x2(h_conv2)
+
+        h_pool2_flat = tf.reshape(h_pool2, [-1, 7 * 7 * 128])
+
+        h_fc1 = nn_layer(h_pool2_flat, 7 * 7 * 128, 512, 'fc1', \
+                         training_status=training_status, act=tf.nn.relu)
+        dropped_h_fc1 = tf.nn.dropout(h_fc1, keep_prob)
+
+        h_fc2 = nn_layer(dropped_h_fc1, 512, 256, 'fc2', \
+                         training_status=training_status, act=tf.nn.relu)
+        dropped_h_fc2 = tf.nn.dropout(h_fc2, keep_prob)
+
+        # Do not apply softmax activation yet, see below.
+        output = nn_layer(dropped_h_fc2, 256, 10, 'softmax', \
+                          training_status=training_status, act=tf.identity)
+
+        return output, keep_prob
+
+
+----------------------
+Training / Evaluation
+----------------------
+
+At first, please clone the repository. Then, execute the ``main.py``:
+
+.. code:: shell
+
+    python main.py
+
+Using the above script, the code does the following:
+
+  * Automatically download the dataset
+  * Starts training
+  * Does the evaluation while training is running.
+
+**NOTE:** *If you are using a virtual environment which contain TensorFLow, make sure to activate it before running the model.*
+
+--------
+Results
+--------
+
+The below figure depicts a comparison at different level of sparsity. As it can be observed from the figure, our
+method demonstrates its superiority in higher levels of sparsity.
+
+.. |im| image:: _img/comparison.png
+
+|im|
