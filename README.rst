@@ -17,7 +17,7 @@ Attention-Based Guided Structured Sparsity of Deep Convolutional Neural Networks
 .. image:: https://zenodo.org/badge/120543193.svg
    :target: https://zenodo.org/badge/latestdoi/120543193
 
-This repository contains the code developed by TensorFlow_ for the following paper:
+This repository contains the code developed by TensorFlow_ for our paper:
 
 
 | `Attention-Based Guided Structured Sparsity of Deep Convolutional Neural Networks`_,
