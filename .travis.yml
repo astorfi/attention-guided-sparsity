@@ -11,7 +11,7 @@ install:
 
 script:
 
-  - coverage run --omit=*.virtualenvs*,*virtualenv* python/main.py test
+  - coverage run --omit=*.virtualenvs*,*virtualenv* python/main.py --max_steps=100 test
 
 after_success:
   - coveralls
