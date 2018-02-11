@@ -1,14 +1,14 @@
 ===================================================================================
 Attention-Based Guided Structured Sparsity of Deep Neural Networks
 ===================================================================================
-.. image:: https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat
-    :target: https://github.com/astorfi/attention-guided-sparsity/pulls
-.. image:: https://badges.frapsoft.com/os/v2/open-source.svg?v=102
-    :target: https://github.com/ellerbrock/open-source-badge/
 .. image:: https://travis-ci.org/astorfi/attention-guided-sparsity.svg?branch=master
     :target: https://travis-ci.org/astorfi/attention-guided-sparsity
 .. image:: https://coveralls.io/repos/github/astorfi/attention-guided-sparsity/badge.svg?branch=master
     :target: https://coveralls.io/github/astorfi/attention-guided-sparsity?branch=master
+.. image:: https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat
+    :target: https://github.com/astorfi/attention-guided-sparsity/pulls
+.. image:: https://badges.frapsoft.com/os/v2/open-source.svg?v=102
+    :target: https://github.com/ellerbrock/open-source-badge/
 .. image:: http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat
     :target: https://github.com/astorfi/attention-guided-sparsity/blob/master/LICENSE
 .. image:: http://www.repostatus.org/badges/latest/active.svg
