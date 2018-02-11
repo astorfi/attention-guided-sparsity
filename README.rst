@@ -157,6 +157,18 @@ investigation of our proposed method with no data augmentation. The baseline arc
 Training / Evaluation
 ----------------------
 
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="demo/asciinema-player.css" />
+</head>
+<body>
+  <asciinema-player src="demo/162175.json" cols="80" rows="24"></asciinema-player>
+  ...
+  <script src="demo/asciinema-player.js"></script>
+</body>
+</html>
+
+
 At first, clone the repository. Then, cd to the dedicated directory:
 
 .. code:: shell
