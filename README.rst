@@ -168,11 +168,17 @@ Training / Evaluation
 .. </body>
 .. </html>
 
-
+~~~~~~~~
+Demo
+~~~~~~~~
 |speakerrecognition|
 
 .. |speakerrecognition| image:: demo/demo_snapshot.png
-    :target: https://asciinema.org/a/ysP0YqvBk4nxhagh4ova0b5Yp
+    :target: https://asciinema.org/a/162175
+
+~~~~~~~~~~~~
+Description
+~~~~~~~~~~~~
 
 At first, clone the repository. Then, cd to the dedicated directory:
 
