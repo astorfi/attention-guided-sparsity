@@ -106,36 +106,6 @@ For this repository, the experiments are performed on `MNIST dataset`_ which is 
 
 For which the **FLAGS** are predefined by *argument parser*.
 
-~~~~~~~~~~
-Arguments
-~~~~~~~~~~
-
-The required ``arguments`` are defined by the following python script which
-have been defined in the ``VisualizeLip.py`` file:
-
-.. code:: python
-
-  parser.add_argument('--fake_data', nargs='?', const=True, type=bool,
-                      default=False,
-                      help='If true, uses fake data for unit testing.')
-  parser.add_argument('--max_steps', type=int, default=100,
-                      help='Number of steps to run trainer.')
-  parser.add_argument('--learning_rate', type=float, default=0.0001,
-                      help='Initial learning rate')
-  parser.add_argument('--sparsity_threshold', type=float, default=0.001,
-                      help='Initial learning rate')
-  parser.add_argument('--dropout', type=float, default=0.8,
-                      help='Keep probability for training dropout.')
-  parser.add_argument('--data_dir', type=str,
-     default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),'tensorflow/mnist/input_data'),
-     help='Directory for storing input data')
-  parser.add_argument('--log_dir',type=str,
-      default=os.path.join(os.getenv('TEST_TMPDIR', '/tmp'),
-      'tensorflow/mnist/logs/mnist_sparsity'),help='Summaries log directory')
-
-All of the defined arguments have their default values and no further action is
-required.
-
 .. _MNIST dataset: http://yann.lecun.com/exdb/mnist/
 
 
